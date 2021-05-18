@@ -18,11 +18,11 @@ import com.model2.mvc.service.product.ProductService;
 
 /*
  *	FileName :  UserServiceTest.java
- * ¤· JUnit4 (Test Framework) °ú Spring Framework ÅëÇÕ Test( Unit Test)
- * ¤· Spring Àº JUnit 4¸¦ À§ÇÑ Áö¿ø Å¬·¡½º¸¦ ÅëÇØ ½ºÇÁ¸µ ±â¹Ý ÅëÇÕ Å×½ºÆ® ÄÚµå¸¦ ÀÛ¼º ÇÒ ¼ö ÀÖ´Ù.
- * ¤· @RunWith : Meta-data ¸¦ ÅëÇÑ wiring(»ý¼º,DI) ÇÒ °´Ã¼ ±¸ÇöÃ¼ ÁöÁ¤
- * ¤· @ContextConfiguration : Meta-data location ÁöÁ¤
- * ¤· @Test : Å×½ºÆ® ½ÇÇà ¼Ò½º ÁöÁ¤
+ * ï¿½ï¿½ JUnit4 (Test Framework) ï¿½ï¿½ Spring Framework ï¿½ï¿½ï¿½ï¿½ Test( Unit Test)
+ * ï¿½ï¿½ Spring ï¿½ï¿½ JUnit 4ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½×½ï¿½Æ® ï¿½Úµå¸¦ ï¿½Û¼ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
+ * ï¿½ï¿½ @RunWith : Meta-data ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ wiring(ï¿½ï¿½ï¿½ï¿½,DI) ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ @ContextConfiguration : Meta-data location ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ @Test : ï¿½×½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½Ò½ï¿½ ï¿½ï¿½ï¿½ï¿½
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration	(locations = {	"classpath:config/context-common.xml",
@@ -35,7 +35,7 @@ import com.model2.mvc.service.product.ProductService;
 //@ContextConfiguration(locations = { "classpath:config/commonservice.xml" })
 public class ProductServiceTest {
 
-	//==>@RunWith,@ContextConfiguration ÀÌ¿ë Wiring, Test ÇÒ instance DI
+	//==>@RunWith,@ContextConfiguration ï¿½Ì¿ï¿½ Wiring, Test ï¿½ï¿½ instance DI
 	@Autowired
 	@Qualifier("productServiceImpl")
 	private ProductService productService;
@@ -49,15 +49,15 @@ public class ProductServiceTest {
 		product.setProdDetail("testprodDetail");
 		product.setManuDate("testManudate");
 		product.setPrice(1000);
-		product.setFileName("°æ±âµµ");
+		product.setFileName("jpg");
 		
 		
 		productService.addProduct(product);
 
 		product = productService.getProduct(10001);
 
-		//==> console È®ÀÎ	
-		//==> API È®ÀÎ
+		//==> console È®ï¿½ï¿½	
+		//==> API È®ï¿½ï¿½
 		
 		/*
 		 * Assert.assertEquals("ProdNo", product.getProdNo());
@@ -74,7 +74,7 @@ public class ProductServiceTest {
 	public void testGetProduct() throws Exception {
 		
 		Product product = new Product();
-		//==> ÇÊ¿äÇÏ´Ù¸é...
+		//==> ï¿½Ê¿ï¿½ï¿½Ï´Ù¸ï¿½...
 	//		produt.setProdNo("testProdNo");
 	//		product.setProdName("testProdName");
 	//		product.setPrice("12345");
@@ -83,11 +83,11 @@ public class ProductServiceTest {
 		product = productService.getProduct(10001);
 
 
-		//==> console È®ÀÎ	
-		//==> API È®ÀÎ
+		//==> console È®ï¿½ï¿½	
+		//==> API È®ï¿½ï¿½
 
 		/*
-		 * Assert.assertEquals("È«±æµ¿", product.getProdName());
+		 * Assert.assertEquals("È«ï¿½æµ¿", product.getProdName());
 		 * Assert.assertEquals("detail", product.getProdDetail());
 		 * Assert.assertEquals("2021-05-11", product.getManuDate());
 		 * Assert.assertEquals("10,000,000", product.getPrice());
@@ -106,51 +106,51 @@ public class ProductServiceTest {
 	//	Assert.assertEquals("testprodName", product.getProdName());
 	//	Assert.assertEquals("testprodDetail", product.getProdDetail());
 	//	Assert.assertEquals(1000, product.getPrice());
-	//	Assert.assertEquals("°æ±âµµ", product.getFileName());
+	//	Assert.assertEquals("ï¿½ï¿½âµµ", product.getFileName());
 		
-		product.setProdName("ÀÌ¼ø½Å");
-		product.setProdDetail("detail ¹Ù²ñ");
-		product.setManuDate("³¯Â¥ ¹Ù²ñ");
+		product.setProdName("ï¿½Ì¼ï¿½ï¿½ï¿½");
+		product.setProdDetail("detail ï¿½Ù²ï¿½");
+		product.setManuDate("ï¿½ï¿½Â¥ ï¿½Ù²ï¿½");
 		product.setPrice(50000);
-		product.setFileName("ÆÄÀÏ ¹Ù²ñ");
+		product.setFileName("ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½");
 		
 		productService.updateProduct(product);
 		
 		product = productService.getProduct(10128);
 		Assert.assertNotNull(product);
 		
-		//==> console È®ÀÎ
+		//==> console È®ï¿½ï¿½
 		//System.out.println(product);
 			
-		//==> API È®ÀÎ
-	//	Assert.assertEquals("ÀÌ¼ø½Å", product.getProdName());
-	//	Assert.assertEquals("detail ¹Ù²ñ", product.getProdDetail());
-	//	Assert.assertEquals("³¯Â¥ ¹Ù²ñ", product.getManuDate());
-	//	Assert.assertEquals("±Ý¾× ¹Ù²ñ", product.getPrice());
-	//	Assert.assertEquals("ÆÄÀÏ ¹Ù²ñ", product.getFileName());
+		//==> API È®ï¿½ï¿½
+	//	Assert.assertEquals("ï¿½Ì¼ï¿½ï¿½ï¿½", product.getProdName());
+	//	Assert.assertEquals("detail ï¿½Ù²ï¿½", product.getProdDetail());
+	//	Assert.assertEquals("ï¿½ï¿½Â¥ ï¿½Ù²ï¿½", product.getManuDate());
+	//	Assert.assertEquals("ï¿½Ý¾ï¿½ ï¿½Ù²ï¿½", product.getPrice());
+	//	Assert.assertEquals("ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½", product.getFileName());
 	 }
 	 
 	//@Test
 	/*
 	 * public void testCheckDuplication() throws Exception{
 	 */
-		//==> ÇÊ¿äÇÏ´Ù¸é...
+		//==> ï¿½Ê¿ï¿½ï¿½Ï´Ù¸ï¿½...
 //		User user = new User();
 //		user.setUserId("testUserId");
 //		user.setUserName("testUserName");
 //		user.setPassword("testPasswd");
 //		user.setSsn("1111112222222");
 //		user.setPhone("111-2222-3333");
-//		user.setAddr("°æ±âµµ");
+//		user.setAddr("ï¿½ï¿½âµµ");
 //		user.setEmail("test@test.com");
 //		
 //		userService.addUser(user);
 		
-		//==> console È®ÀÎ
+		//==> console È®ï¿½ï¿½
 		//System.out.println(userService.checkDuplication("testUserId"));
 		//System.out.println(userService.checkDuplication("testUserId"+System.currentTimeMillis()) );
 	 	
-		//==> API È®ÀÎ
+		//==> API È®ï¿½ï¿½
 		/*
 		 * Assert.assertFalse( productService.checkDuplication("testProdNo") );
 		 * Assert.assertTrue(
@@ -158,7 +158,7 @@ public class ProductServiceTest {
 		 * 
 		 * }
 		 */
-	 //==>  ÁÖ¼®À» Ç®°í ½ÇÇàÇÏ¸é....
+	 //==>  ï¿½Ö¼ï¿½ï¿½ï¿½ Ç®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½....
 	 //@Test
 	 public void testGetProductListAll() throws Exception{
 		 
@@ -170,7 +170,7 @@ public class ProductServiceTest {
 	 	List<Object> list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(3, list.size());
 	 	
-		//==> console È®ÀÎ
+		//==> console È®ï¿½ï¿½
 	 	System.out.println(list);
 	 	
 	 	Integer totalCount = (Integer)map.get("totalCount");
@@ -187,7 +187,7 @@ public class ProductServiceTest {
 	 	list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(3, list.size());
 	 	
-	 	//==> console È®ÀÎ
+	 	//==> console È®ï¿½ï¿½
 	 	System.out.println(list);
 	 	
 	 	totalCount = (Integer)map.get("totalCount");
@@ -207,7 +207,7 @@ public class ProductServiceTest {
 	 	List<Object> list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(1, list.size());
 	 	
-		//==> console È®ÀÎ
+		//==> console È®ï¿½ï¿½
 	 	System.out.println(list);
 	 	
 	 	Integer totalCount = (Integer)map.get("totalCount");
@@ -222,7 +222,7 @@ public class ProductServiceTest {
 	 	list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(0, list.size());
 	 	
-		//==> console È®ÀÎ
+		//==> console È®ï¿½ï¿½
 	 	//System.out.println(list);
 	 	
 	 	totalCount = (Integer)map.get("totalCount");
@@ -236,13 +236,13 @@ public class ProductServiceTest {
 	 	search.setCurrentPage(1);
 	 	search.setPageSize(3);
 	 	search.setSearchCondition("1");
-	 	search.setSearchKeyword("ÀÚÀü°Å");
+	 	search.setSearchKeyword("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	 	Map<String,Object> map = productService.getProductList(search);
 	 	
 	 	List<Object> list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(1, list.size());
 	 	
-		//==> console È®ÀÎ
+		//==> console È®ï¿½ï¿½
 	 	System.out.println(list);
 	 	
 	 	Integer totalCount = (Integer)map.get("totalCount");
@@ -257,7 +257,7 @@ public class ProductServiceTest {
 	 	list = (List<Object>)map.get("list");
 	 	Assert.assertEquals(0, list.size());
 	 	
-		//==> console È®ÀÎ
+		//==> console È®ï¿½ï¿½
 	 	//System.out.println(list);
 	 	
 	 	totalCount = (Integer)map.get("totalCount");

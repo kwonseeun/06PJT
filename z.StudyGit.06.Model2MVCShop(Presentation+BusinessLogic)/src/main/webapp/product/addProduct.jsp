@@ -1,11 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-    
-   <%@ page import="com.model2.mvc.service.domain.*" %>
-
-<%
-Product vo=(Product)request.getAttribute("vo");
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
@@ -45,10 +40,10 @@ Product vo=(Product)request.getAttribute("vo");
 			상품명 <img src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01"><%=vo.getProdName() %>
+		<td class="ct_write01">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tr>
-					<td width="105"></td>
+					<td width="105">${product.prodName}</td>
 					<td></td>
 				</tr>
 			</table>
@@ -63,7 +58,7 @@ Product vo=(Product)request.getAttribute("vo");
 			상품상세정보 <img  src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01"><%=vo.getProdDetail() %></td>
+		<td class="ct_write01">${product.prodDetail}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -74,7 +69,7 @@ Product vo=(Product)request.getAttribute("vo");
 			제조일자<img	src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01"><%=vo.getManuDate() %></td>
+		<td class="ct_write01">${product.manuDate}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
@@ -84,25 +79,18 @@ Product vo=(Product)request.getAttribute("vo");
 			가격<img 	src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
 		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01"><%=vo.getPrice() %></td>
+		<td class="ct_write01">${product.price}</td>
 	</tr>
 
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
 	</tr>
 	<tr>
-		<td width="104" class="ct_write">상품이미지</td>
-		<td bgcolor="D6D6D6" width="1"></td>
-		<td class="ct_write01"><%=vo.getFileName() %>
-			<!-- 테이블 시작 -->
-			<table border="0" cellspacing="0" cellpadding="0">
-				<tr>
-					<td height="26">
-						<img src="/images/uploadFiles/../../images/empty.GIF"/>
-					</td>
-				</tr>
-			</table>
+		<td width="104" class="ct_write">
+			상품이미지<img 	src="/images/ct_icon_red.gif" width="3" height="3" align="absmiddle"/>
 		</td>
+		<td bgcolor="D6D6D6" width="1"></td>
+		<td class="ct_write01">${product.fileName}</td>
 	</tr>
 	<tr>
 		<td height="1" colspan="3" bgcolor="D6D6D6"></td>
