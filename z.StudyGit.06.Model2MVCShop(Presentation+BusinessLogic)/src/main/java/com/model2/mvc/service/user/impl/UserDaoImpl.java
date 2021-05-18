@@ -12,7 +12,7 @@ import com.model2.mvc.service.domain.User;
 import com.model2.mvc.service.user.UserDao;
 
 
-//==> È¸¿ø°ü¸® DAO CRUD ±¸Çö
+//==> íšŒì›ê´€ë¦¬ DAO CRUD êµ¬í˜„
 @Repository("userDaoImpl")
 public class UserDaoImpl implements UserDao{
 	
@@ -46,7 +46,7 @@ public class UserDaoImpl implements UserDao{
 		return sqlSession.selectList("UserMapper.getUserList", search);
 	}
 
-	// °Ô½ÃÆÇ Page Ã³¸®¸¦ À§ÇÑ ÀüÃ¼ Row(totalCount)  return
+	// ê²Œì‹œíŒ Page ì²˜ë¦¬ë¥¼ ìœ„í•œ ì „ì²´ Row(totalCount)  return
 	public int getTotalCount(Search search) throws Exception {
 		return sqlSession.selectOne("UserMapper.getTotalCount", search);
 	}

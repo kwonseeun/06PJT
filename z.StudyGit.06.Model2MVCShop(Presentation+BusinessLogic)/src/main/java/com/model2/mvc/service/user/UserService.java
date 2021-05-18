@@ -6,22 +6,22 @@ import com.model2.mvc.common.Search;
 import com.model2.mvc.service.domain.User;
 
 
-//==> È¸¿ø°ü¸®¿¡¼­ ¼­ºñ½ºÇÒ ³»¿ë Ãß»óÈ­/Ä¸½¶È­ÇÑ Service  Interface Definition  
+//==> íšŒì›ê´€ë¦¬ì—ì„œ ì„œë¹„ìŠ¤í•  ë‚´ìš© ì¶”ìƒí™”/ìº¡ìŠí™”í•œ Service  Interface Definition  
 public interface UserService {
 	
-	// È¸¿ø°¡ÀÔ
+	// íšŒì›ê°€ì…
 	public void addUser(User user) throws Exception;
 	
-	// ³»Á¤º¸È®ÀÎ / ·Î±×ÀÎ
+	// ë‚´ì •ë³´í™•ì¸ / ë¡œê·¸ì¸
 	public User getUser(String userId) throws Exception;
 	
-	// È¸¿øÁ¤º¸¸®½ºÆ® 
+	// íšŒì›ì •ë³´ë¦¬ìŠ¤íŠ¸ 
 	public Map<String , Object> getUserList(Search search) throws Exception;
 	
-	// È¸¿øÁ¤º¸¼öÁ¤
+	// íšŒì›ì •ë³´ìˆ˜ì •
 	public void updateUser(User user) throws Exception;
 	
-	// È¸¿ø ID Áßº¹ È®ÀÎ
+	// íšŒì› ID ì¤‘ë³µ í™•ì¸
 	public boolean checkDuplication(String userId) throws Exception;
 	
 }

@@ -14,7 +14,7 @@ import com.model2.mvc.service.user.UserService;
 import com.model2.mvc.service.user.UserDao;;
 
 
-//==> È¸¿ø°ü¸® ¼­ºñ½º ±¸Çö
+//==> íšŒì›ê´€ë¦¬ ì„œë¹„ìŠ¤ êµ¬í˜„
 @Service("userServiceImpl")
 public class UserServiceImpl implements UserService{
 	
