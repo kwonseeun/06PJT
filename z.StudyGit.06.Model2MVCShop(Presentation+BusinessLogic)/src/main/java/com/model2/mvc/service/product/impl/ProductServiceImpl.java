@@ -58,4 +58,6 @@ public class ProductServiceImpl implements ProductService{
 		productDao.updateProduct(product);
 		
 	}
+
+
 }
